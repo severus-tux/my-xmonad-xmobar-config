@@ -1,0 +1,25 @@
+"xbacklight +2"
+    XF86MonBrightnessUp
+
+
+"xbacklight -2"
+    XF86MonBrightnessDown
+
+"amixer -q sset Master 0.5dB+"
+    XF86AudioRaiseVolume
+
+"amixer -q sset Master 0.5dB-"
+    XF86AudioLowerVolume
+
+"amixer -q sset Master toggle"
+    XF86AudioMute
+
+"scrot -e 'mv $f ~/shots/'"
+    Print
+
+"scrot -u -e 'mv $f ~/shots/'"
+    Control + Print
+
+"sleep 0.2s ; scrot -s -e 'mv $f ~/shots/' &"
+    Shift + Print
+
