@@ -12,7 +12,8 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template =  "%multicpu% | %coretemp% | %memory% | %dynnetwork% | <fc=#FCFC00>vol: %volume%</fc> | %StdinReader% }{ %VOBL% | %date% "
+   , template =  "%multicpu% | %coretemp% | %memory% | %dynnetwork% | <fc=#FCFC00>vol: %volume%</fc> | %StdinReader% }{  | %date% "
+   --, template =  "%multicpu% | %coretemp% | %memory% | %dynnetwork% | <fc=#FCFC00>vol: %volume%</fc> | %StdinReader% }{ %VOBG% | %date% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -84,8 +85,8 @@ Config {
 
         , Run Date           "<fc=#B1FB17>%F (%a)</fc><fc=#FCFC00> %r</fc>" "date" 10
         , Run StdinReader
-        , Run Weather "VOBL" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"
-                             ] 36000
+--        , Run Weather "VOBG" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"
+--                             ] 36000
 		]
                 
         

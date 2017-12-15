@@ -5,10 +5,10 @@
 "xbacklight -2"
     XF86MonBrightnessDown
 
-"amixer -q sset Master 0.5dB+"
+"amixer -q sset Master 1%+"
     XF86AudioRaiseVolume
 
-"amixer -q sset Master 0.5dB-"
+"amixer -q sset Master 1%-"
     XF86AudioLowerVolume
 
 "amixer -q sset Master toggle"
@@ -23,3 +23,5 @@
 "sleep 0.2s ; scrot -s -e 'mv $f ~/shots/' &"
     Shift + Print
 
+"xscreensaver-command -lock"
+    Control + Shift + l

@@ -6,10 +6,10 @@ sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # Set background image with feh
-feh --bg-scale /home/severus/Pictures/dark-blue-sunset-rocks-river-nature-wallpapers.jpg &
+feh --bg-scale /home/severus/Pictures/black_panther.jpg &
 
 # Set cursor
-xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr &
 
 # merge in defaults and keymaps
 
@@ -62,9 +62,14 @@ fi
 
 
 #Start xbindkeys Demon
-xbindkeys
+xbindkeys &
 
 #Start Xmonad Window Manager
-exec terminator &
+#exec terminator &
+exec ibus-daemon &
+exec compton &
+exec redshift  -l 12.8996230:77.4826980 &
+#exec xscreensaver &
+#/home/severus/lightsOn.sh &
 exec xmonad
 #exec startxfce4
