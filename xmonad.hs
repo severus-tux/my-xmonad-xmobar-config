@@ -78,12 +78,18 @@ myWorkspaces    = ["1:main","2:web","3:emacs", "4:vlc"  , "5:files" , "6:gimp" ,
 
 myManageHook = composeAll
 	   [ className =? "Firefox" --> viewShift "2:web"
+           , className =? "Tor" --> viewShift "2:web"
+           , className =? "Chromium" --> viewShift "2:web"
 	   , className =? "Terminator" --> viewShift "1:main"
 	   , className =? "Vlc" --> viewShift "4:vlc"
 	   , className =? "Gedit" --> viewShift "3:emacs"
 	   , className =? "Nautilus" --> viewShift "5:files"
+	   , className =? "Thunar" --> viewShift "5:files"
+	   , className =? "Xfe" --> viewShift "5:files"
+	   , className =? "Pcmanfm" --> viewShift "5:files"
 	   , className =? "Emacs" --> viewShift "3:emacs"
 	   , className =? "Gimp" --> viewShift "6:gimp"
+	   , className =? "Slack" --> viewShift "7"
 	   , className =? "Xmessage"  --> doFloat
 	   , manageDocks
 	   , isFullscreen --> doFullFloat
